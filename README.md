@@ -63,7 +63,7 @@ Before you can analyze this code, you need to set the parameters to run the scri
 
 If you want to run script with the `bfs + smt-dreal` configuration to analyze the example code,
 ```sh
-$ ./benchmark/run_solver.sh example simple smt-dreal bfs
+$ ./benchmark/run_solver.sh test simple smt-dreal bfs
 ```
 
 Less than 1 minutes, we can see the output at the terminal. The pathes are explored completely.

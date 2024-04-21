@@ -73,9 +73,9 @@ $ cat test/simple\&smt-dreal\&bfs.runlog
 ```
 
 ```
-KLEE: KLEE: WATCHDOG: watching 7538
+KLEE: KLEE: WATCHDOG: watching 177
 
-KLEE: output directory is "/home/aaa/analysis/test/test&simple&smt-dreal&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis/test/test&simple&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -86,38 +86,38 @@ KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: ERROR: (location information missing) FloatPointCheck: FP Invalid found !
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.138568e+02 ms
+>>>Synergy-Z3 exec time: 1.702099e+02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.793000e-03 ms
->>>Synergy-dreal exec time: 2.166740e-01 ms
+>>>Synergy-Z3 exec time: 5.062000e-03 ms
+>>>Synergy-dreal exec time: 1.830823e+00 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.498000e-03 ms
->>>Synergy-dreal exec time: 3.196090e-01 ms
+>>>Synergy-Z3 exec time: 6.328000e-03 ms
+>>>Synergy-dreal exec time: 8.808838e+00 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.424000e-03 ms
->>>Synergy-dreal exec time: 5.293760e-01 ms
+>>>Synergy-Z3 exec time: 5.023000e-03 ms
+>>>Synergy-dreal exec time: 2.091033e+00 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 2.838442e+03 ms
+>>>Fuzz with seed exec time: 7.092697e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 4.801000e-03 ms
->>>Synergy-dreal exec time: 2.618759e+00 ms
+>>>Synergy-Z3 exec time: 5.237000e-03 ms
+>>>Synergy-dreal exec time: 1.521205e+00 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.060000e-03 ms
->>>Synergy-dreal exec time: 1.037439e+00 ms
+>>>Synergy-Z3 exec time: 5.451000e-03 ms
+>>>Synergy-dreal exec time: 1.598952e+00 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.336725e+04 ms
+>>>Fuzz with seed exec time: 1.141540e+04 ms
 KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 8.426000e-03 ms
->>>Synergy-dreal exec time: 2.128500e-02 ms
+>>>Synergy-Z3 exec time: 8.463000e-03 ms
+>>>Synergy-dreal exec time: 2.648600e-02 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.165180e+02 ms
+>>>Synergy-Z3 exec time: 2.075294e+02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
 
-KLEE: done: total instructions = 42
+KLEE: done: total instructions = 39
 KLEE: done: completed paths = 3
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 4
-Total exec time: 6.105436e+04 ms
+Total exec time: 2.424297e+04 ms
 ```
 
 If you want to analyze this program using the BVFP solver, please modify the `solver_type` parameter to `smt`，`bitwuzla` or `mathsat5`.  KLEE will take a long time (more than 30 min) to finish the program (you can CTRL+C to intrupt this program), because the source code of `sin/cos/log` are not avalible.  it can not explore all pathes fastly:

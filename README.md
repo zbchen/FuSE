@@ -6,7 +6,7 @@ We have deployed the experimental environment on docker. Please pre install dock
 
 Download docker image:
 ```sh
-$ sudo docker pull dockeryangxu/fpse:4.0
+$ sudo docker pull dockeryangxu/fpse:5.0
 ```
 
 If the image is pulled successfully, please check there is an image named apsecpaper/apsecpaper exists.
